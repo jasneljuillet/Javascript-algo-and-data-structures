@@ -11,11 +11,17 @@ Only integers greater than or equal to zero will be supplied to the function.
  */
 
 function factorialize(num) {
-  let facto = 1;
-  for (let i = 1; i <= num; i++) {
-    facto = facto * i;
+  if (num > 0) {
+    let facto = 1;
+    for (let i = 1; i <= num; i++) {
+      facto = facto * i;
+    }
+    return (num = facto);
   }
-  return (num = facto);
+
+  if (num == 0) return (num = 1);
+
+  return `${num} is a negatif number, please insert a positiv one!`;
 }
 
-factorialize(5);
+factorialize(0);
